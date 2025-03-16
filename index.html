@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ru">
+	
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Favicons -->
+		<link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg">
+		<link rel="shortcut icon" href="img/favicon/favicon.ico">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+		<link rel="manifest" href="img/favicon/site.webmanifest">
+
+		<link rel="stylesheet" href="css/aos.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<title>Deecode</title>
+	</head>
+	<body>
+
+		<!-- Sprite -->
+		<svg style="display: none;">
+
+			<symbol id="vk" viewBox="0 0 24 24">
+				<g>
+					<path d="M13.1,19.5c-8.2,0-12.9-5.6-13.1-15h4.1c0.1,6.9,3.2,9.8,5.6,10.4V4.5h3.9v5.9c2.4-0.3,4.9-3,5.7-5.9h3.9
+						c-0.6,3.7-3.3,6.4-5.3,7.5c1.9,0.9,5,3.3,6.2,7.5h-4.3c-0.9-2.8-3.2-5.1-6.2-5.3v5.3H13.1z"/>
+				</g>
+			</symbol>
+
+			<symbol id="telegram" viewBox="0 0 24 24" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+				<g>
+					<path d="M18.384,22.779c0.322,0.228 0.737,0.285 1.107,0.145c0.37,-0.141 0.642,-0.457 0.724,-0.84c0.869,-4.084 2.977,-14.421 3.768,-18.136c0.06,-0.28 -0.04,-0.571 -0.26,-0.758c-0.22,-0.187 -0.525,-0.241 -0.797,-0.14c-4.193,1.552 -17.106,6.397 -22.384,8.35c-0.335,0.124 -0.553,0.446 -0.542,0.799c0.012,0.354 0.25,0.661 0.593,0.764c2.367,0.708 5.474,1.693 5.474,1.693c0,0 1.452,4.385 2.209,6.615c0.095,0.28 0.314,0.5 0.603,0.576c0.288,0.075 0.596,-0.004 0.811,-0.207c1.216,-1.148 3.096,-2.923 3.096,-2.923c0,0 3.572,2.619 5.598,4.062Zm-11.01,-8.677l1.679,5.538l0.373,-3.507c0,0 6.487,-5.851 10.185,-9.186c0.108,-0.098 0.123,-0.262 0.033,-0.377c-0.089,-0.115 -0.253,-0.142 -0.376,-0.064c-4.286,2.737 -11.894,7.596 -11.894,7.596Z"/>
+				</g>
+			</symbol>
+
+			<symbol id="instagram" viewBox="0 0 24 24">
+				<g transform="translate(-340.000000, -7439.000000)">
+					<g transform="translate(56.000000, 160.000000)">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M291,7279.1c-2,0.1-3.6,0.6-5,1.9c-1.4,1.4-1.8,3.1-1.9,5
+							c-0.1,1.2-0.4,10.3,0.6,12.7c0.6,1.6,1.9,2.9,3.5,3.5c0.8,0.3,1.6,0.5,2.9,0.6c10.6,0.5,14.6,0.2,16.2-4c0.3-0.8,0.5-1.6,0.6-2.9
+							c0.5-10.7-0.1-13-1.9-14.8C304.4,7279.6,302.7,7278.6,291,7279.1 M291.1,7300.7c-1.2-0.1-1.8-0.2-2.2-0.4
+							c-1.1-0.4-1.9-1.2-2.3-2.3c-0.7-1.8-0.5-10.4-0.4-11.8c0.1-1.4,0.3-2.6,1.3-3.6c1.2-1.2,2.7-1.8,13.2-1.3
+							c1.4,0.1,2.6,0.3,3.6,1.3c1.2,1.2,1.8,2.7,1.3,13.2c-0.1,1.2-0.2,1.8-0.4,2.2C304.2,7300.8,301.7,7301.2,291.1,7300.7
+							M300.9,7284.6c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4c0-0.8-0.6-1.4-1.4-1.4C301.5,7283.2,300.9,7283.8,300.9,7284.6
+							M289.8,7291c0,3.4,2.7,6.1,6.1,6.1s6.1-2.7,6.1-6.1s-2.7-6.1-6.1-6.1S289.8,7287.6,289.8,7291 M292,7291c0-2.2,1.8-4,4-4
+							c2.2,0,4,1.8,4,4c0,2.2-1.8,4-4,4C293.8,7295,292,7293.2,292,7291"/>
+					</g>
+				</g>
+			</symbol>
+
+			<symbol id="whatsapp" viewBox="0 0 24 24">
+				<g>
+					<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+				</g>
+			</symbol>
+
+			<symbol id="location" viewBox="0 0 24 24">
+				<g>
+					<path fill="none" stroke-width="1.5" d="M3.1,9.9c0-5,4-9,8.9-9c4.9,0,8.9,4,8.9,9c0,5-2.8,10.7-7.3,12.8c-1,0.5-2.2,0.5-3.2,0C6,20.7,3.1,14.9,3.1,9.9z"/>
+					<circle fill="none" stroke-width="1.5" cx="12" cy="9.8" r="3.3"/>
+				</g>
+			</symbol>
+
+			<symbol id="call" viewBox="0 0 24 24">
+				<g>
+					<path fill="none" stroke-linecap="round" stroke-width="2" d="M13.2,1.1c0,0,2.7,0.2,6.1,3.6s3.6,6.1,3.6,6.1"/>
+					<path fill="none" stroke-linecap="round" stroke-width="2" d="M13.5,5.4c0,0,1.2,0.3,3,2.1c1.8,1.8,2.1,3,2.1,3"/>
+					<path fill="none" stroke-linecap="round" stroke-width="2" d="M8.4,5.1l0.8,1.4c0.7,1.3,0.4,2.9-0.7,4.1l0,0c0,0-1.4,1.4,1.1,3.8c2.5,2.5,3.8,1.1,3.8,1.1l0,0
+						c1.1-1.1,2.8-1.4,4.1-0.7l1.4,0.8c1.9,1.1,2.1,3.8,0.5,5.4c-1,1-2.3,1.8-3.6,1.9c-2.3,0.1-6.2-0.5-10.2-4.4C1.6,14.5,1,10.6,1.1,8.3
+						C1.2,6.9,2,5.7,3,4.7C4.7,3,7.3,3.2,8.4,5.1z"/>
+				</g>
+			</symbol>
+
+			<symbol id="illustrator" viewBox="0 0 24 24">
+				<g>
+					<path fill="#330000" d="M0.2,8.7c0-3,0-4.5,0.6-5.6c0.5-1,1.3-1.8,2.3-2.3c1.1-0.6,2.6-0.6,5.6-0.6h6.5c3,0,4.5,0,5.6,0.6
+						c1,0.5,1.8,1.3,2.3,2.3c0.6,1.1,0.6,2.6,0.6,5.6v6.5c0,3,0,4.5-0.6,5.6c-0.5,1-1.3,1.8-2.3,2.3c-1.1,0.6-2.6,0.6-5.6,0.6H8.7
+						c-3,0-4.5,0-5.6-0.6c-1-0.5-1.8-1.3-2.3-2.3c-0.6-1.1-0.6-2.6-0.6-5.6V8.7z"/>
+					<path fill="#FF9A00" d="M11.6,15H8l-0.7,2.4c0,0.1-0.1,0.2-0.2,0.1H5.2c-0.1,0-0.1-0.1-0.1-0.2L8.2,8c0-0.1,0.1-0.2,0.1-0.3
+						c0-0.2,0.1-0.4,0.1-0.7c0-0.1,0-0.1,0.1-0.1H11c0.1,0,0.1,0,0.1,0.1l3.6,10.4c0,0.1,0,0.2-0.1,0.2h-2.1c-0.1,0-0.1,0-0.2-0.1
+						L11.6,15z M8.5,13h2.5c-0.4-1.4-0.9-2.8-1.3-4.2C9.4,10.2,9,11.6,8.5,13z"/>
+					<path fill="#FF9A00" d="M16.9,8.6c-0.2,0-0.3,0-0.5-0.1c-0.2-0.1-0.3-0.2-0.4-0.3c-0.1-0.1-0.2-0.3-0.3-0.4c-0.1-0.2-0.1-0.3-0.1-0.5
+						c0-0.2,0-0.3,0.1-0.5c0.1-0.2,0.2-0.3,0.3-0.4c0.1-0.1,0.3-0.2,0.4-0.3c0.2-0.1,0.3-0.1,0.5-0.1c0.4,0,0.7,0.1,0.9,0.3
+						c0.1,0.1,0.2,0.3,0.2,0.4c0.1,0.2,0.1,0.3,0.1,0.5c0,0.2,0,0.3-0.1,0.5C18,8,17.9,8.2,17.8,8.3c-0.1,0.1-0.3,0.2-0.4,0.3
+						C17.2,8.6,17.1,8.6,16.9,8.6z M15.8,17.4V9.6c0-0.1,0-0.1,0.1-0.1h1.9c0.1,0,0.1,0,0.1,0.1v7.8c0,0.1,0,0.2-0.1,0.2h-1.9
+						C15.8,17.5,15.8,17.5,15.8,17.4z"/>
+				</g>
+			</symbol>
+
+			<symbol id="photoshop" viewBox="0 0 24 24">
+				<g>
+					<path fill="#001E36" d="M0.2,8.7c0-3,0-4.5,0.6-5.6c0.5-1,1.3-1.8,2.3-2.3c1.1-0.6,2.6-0.6,5.6-0.6h6.5c3,0,4.5,0,5.6,0.6
+						c1,0.5,1.8,1.3,2.3,2.3c0.6,1.1,0.6,2.6,0.6,5.6v6.5c0,3,0,4.5-0.6,5.6c-0.5,1-1.3,1.8-2.3,2.3c-1.1,0.6-2.6,0.6-5.6,0.6H8.7
+						c-3,0-4.5,0-5.6-0.6c-1-0.5-1.8-1.3-2.3-2.3c-0.6-1.1-0.6-2.6-0.6-5.6V8.7z"/>
+					<path fill="#31A8FF" d="M5.2,17.5V7.1C5.2,7,5.3,7,5.3,7c1,0,2-0.1,3.1-0.1c1.7,0,3.4,0.6,4.1,2.3c0.1,0.4,0.2,0.9,0.2,1.3
+						c0,0.9-0.2,1.6-0.6,2.2c-1.1,1.6-3,1.6-4.7,1.6v3.3c0,0.1-0.1,0.1-0.1,0.1H5.3C5.3,17.6,5.2,17.6,5.2,17.5z M7.4,8.9v3.4
+						c0.7,0,1.4,0.1,2-0.2c0.7-0.2,1.1-0.8,1.1-1.6c0-0.6-0.3-1.2-0.9-1.5C9,8.9,8.1,8.8,7.4,8.9z"/>
+					<path fill="#31A8FF" d="M18.9,11.7c-0.3-0.2-0.6-0.3-0.9-0.3c-0.4-0.1-2.1-0.4-2.1,0.4c0,0.5,0.8,0.7,1.1,0.9c1.2,0.4,2.6,1.1,2.5,2.6
+						c0,1.8-1.7,2.6-3.3,2.6c-0.8,0-1.6-0.1-2.4-0.5c-0.1,0-0.1-0.1-0.1-0.2v-1.8c0-0.1,0.1-0.1,0.1-0.1c0.7,0.4,1.6,0.6,2.4,0.7
+						c0.4,0,1.1,0,1.1-0.6c0-0.5-0.9-0.7-1.2-0.9c-0.5-0.2-1-0.4-1.4-0.7c-0.6-0.4-1-1.1-1-1.9c0-1.7,1.6-2.5,3.1-2.5
+						c0.7,0,1.4,0,2.1,0.3C19,9.7,19,9.8,19,9.9v1.6C19,11.7,18.9,11.7,18.9,11.7z"/>
+				</g>
+			</symbol>
+
+			<symbol id="adobe-xd" viewBox="0 0 24 24">
+				<g>
+					<path fill="#470137" d="M0.1,8.7c0-3,0-4.5,0.6-5.7C1.2,2,2,1.2,3,0.7c1.2-0.6,2.7-0.6,5.7-0.6h6.6c3,0,4.5,0,5.7,0.6
+						C22,1.2,22.8,2,23.3,3c0.6,1.2,0.6,2.7,0.6,5.7v6.6c0,3,0,4.5-0.6,5.7c-0.5,1-1.3,1.8-2.4,2.4c-1.2,0.6-2.7,0.6-5.7,0.6H8.7
+						c-3,0-4.5,0-5.7-0.6C2,22.8,1.2,22,0.7,21c-0.6-1.2-0.6-2.7-0.6-5.7V8.7z"/>
+					<path fill="#FF61F6" d="M12.6,7.1l-3,5l3.2,5.3c0.1,0.1,0,0.1-0.1,0.1h-2.3c-0.2,0-0.3,0-0.3-0.1c-0.2-0.4-0.4-0.8-0.6-1.3
+						c-0.2-0.4-0.4-0.8-0.7-1.3c-0.2-0.4-0.5-0.9-0.7-1.3c-0.2,0.4-0.5,0.9-0.7,1.3c-0.2,0.4-0.5,0.9-0.7,1.3c-0.2,0.4-0.5,0.9-0.7,1.3
+						c0,0.1-0.1,0.1-0.2,0.1H3.6c-0.1,0-0.1-0.1,0-0.1l3.1-5.2l-3-5.2C3.5,7,3.6,6.9,3.7,6.9h2.3C6,6.9,6.1,7,6.2,7
+						c0.2,0.4,0.4,0.9,0.6,1.3C7,8.8,7.3,9.2,7.5,9.7c0.2,0.4,0.5,0.9,0.7,1.3c0.2-0.4,0.4-0.9,0.6-1.3c0.2-0.4,0.4-0.9,0.7-1.3
+						c0.2-0.4,0.5-0.9,0.7-1.3c0-0.1,0.1-0.1,0.2-0.1h2.1C12.6,6.9,12.6,7,12.6,7.1z"/>
+					<path fill="#FF61F6" d="M17.1,17.8c-1.4,0-2.9-0.6-3.6-1.8c-0.4-0.6-0.5-1.4-0.5-2.3c0-0.8,0.2-1.5,0.5-2.1c0.9-1.7,2.8-2.3,4.6-2.1
+						V6.2c0-0.1,0-0.1,0.1-0.1h2c0.1,0,0.1,0,0.1,0.1v9.7c0,0.4,0,0.8,0.1,1.2c0,0.1,0,0.1-0.1,0.2C19.3,17.6,18.2,17.8,17.1,17.8z
+						M18.1,15.8v-4.5c-1.5-0.4-2.9,0.7-2.9,2.2C15.2,15.2,16.6,16.3,18.1,15.8z"/>
+				</g>
+			</symbol>
+
+			<symbol id="bem" viewBox="0 0 24 24">
+				<g>
+					<path fill="#010101" d="M13.7,19.3h10.2v2.9H13.7V19.3z"/>
+					<path fill="#F7B334" d="M12.2,19.3V14H7.4v5.3H12.2"/>
+					<path fill="#010101" d="M10.2,7.6H6.2l-3-5.8H0.1v17.5h7.4V14h6.2v-2.9C13.7,9.1,12.3,7.6,10.2,7.6L10.2,7.6z M11.3,12.3h-1.1L9,12.1
+						v-0.3h2.3V12.3L11.3,12.3z"/>
+				</g>
+			</symbol>
+
+			<symbol id="bootstrap" viewBox="0 0 24 24">
+				<g>
+					<path fill="#563D7C" d="M0.1,20.8c0,1.7,1.4,3.1,3.1,3.1h17.6c1.7,0,3.1-1.4,3.1-3.1V3.2c0-1.7-1.4-3.1-3.1-3.1H3.2
+					c-1.7,0-3.1,1.4-3.1,3.1V20.8z"/>
+					<path fill="#FFFFFF" d="M10,10.6V7.3h3c0.3,0,0.6,0,0.8,0.1c0.3,0,0.5,0.1,0.7,0.3c0.2,0.1,0.4,0.3,0.5,0.5c0.1,0.2,0.2,0.5,0.2,0.8
+						c0,0.6-0.2,1-0.5,1.3c-0.4,0.3-0.8,0.4-1.4,0.4H10L10,10.6z M6.8,4.8v14.4h7c0.6,0,1.3-0.1,1.9-0.2c0.6-0.2,1.2-0.4,1.6-0.7
+						c0.5-0.3,0.9-0.8,1.1-1.3s0.4-1.2,0.4-1.9c0-0.9-0.2-1.7-0.7-2.3c-0.4-0.6-1.1-1.1-2-1.3c0.6-0.3,1.1-0.7,1.5-1.2
+						c0.3-0.5,0.5-1.1,0.5-1.8c0-0.7-0.1-1.2-0.3-1.7c-0.2-0.5-0.5-0.8-0.9-1.1C16.5,5.3,16,5.1,15.4,5c-0.6-0.1-1.2-0.2-1.9-0.2H6.8
+						L6.8,4.8z M10,16.7v-3.9h3.4c0.7,0,1.2,0.2,1.6,0.5c0.4,0.3,0.6,0.8,0.6,1.6c0,0.4-0.1,0.7-0.2,0.9c-0.1,0.2-0.3,0.4-0.5,0.6
+						c-0.2,0.1-0.5,0.2-0.7,0.3c-0.3,0.1-0.6,0.1-0.9,0.1H10L10,16.7z"/>
+				</g>
+			</symbol>
+
+			<symbol id="css3" viewBox="0 0 20.9 24">
+				<g>
+					<path fill="#1172B8" d="M2.1,21.3l-1.7-21h20.2l-1.7,21l-8.4,2.5L2.1,21.3z"/>
+					<path fill="#33AADD" d="M18.9,1.9h-8.4v20.6l6.7-2.1L18.9,1.9z"/>
+					<path fill="#FFFFFF" d="M13.5,12.4H5.1L4.6,9.5l6.7-2.1H4.6L4.2,4.8h13l-0.4,2.9l-5.5,2.1h5l-0.8,8l-5,1.7l-5-1.7l-0.4-4.2h2.5L8,15.8
+						l2.5,0.8l2.5-0.8L13.5,12.4z"/>
+				</g>
+			</symbol>
+
+			<symbol id="figma" viewBox="0 0 28 24">
+				<g>
+					<path fill="#1ABCFE" fill-rule="evenodd" clip-rule="evenodd" d="M12,12c0-2.1,1.7-3.9,3.9-3.9s3.9,1.7,3.9,3.9s-1.7,3.9-3.9,3.9S12,14.1,12,12z"/>
+					<path fill="#0ACF83" fill-rule="evenodd" clip-rule="evenodd" d="M4.3,19.7c0-2.1,1.7-3.9,3.9-3.9H12v3.9c0,2.1-1.7,3.9-3.9,3.9C6,23.6,4.3,21.9,4.3,19.7z"/>
+					<path fill="#FF7262" fill-rule="evenodd" clip-rule="evenodd" d="M12,0.4v7.7h3.9c2.1,0,3.9-1.7,3.9-3.9c0-2.1-1.7-3.9-3.9-3.9H12z"/>
+					<path fill="#F24E1E" fill-rule="evenodd" clip-rule="evenodd" d="M4.3,4.3c0,2.1,1.7,3.9,3.9,3.9H12V0.4H8.1C6,0.4,4.3,2.1,4.3,4.3z"/>
+					<path fill="#A259FF" fill-rule="evenodd" clip-rule="evenodd" d="M4.3,12c0,2.1,1.7,3.9,3.9,3.9H12V8.1H8.1C6,8.1,4.3,9.9,4.3,12z"/>
+				</g>
+			</symbol>
+
+			<symbol id="gulp" viewBox="0 0 11.1 24">
+				<g>
+					<path fill="#D34A47" d="M8.5,23l0.2-3.8l0.6-1.1c0,0-1.4,0.6-3.8,0.6c-2.4,0-3.8-0.6-3.8-0.6l0.7,1.2L2.7,23c0,0.4,1.3,0.7,2.9,0.7
+					C7.2,23.8,8.5,23.4,8.5,23"/>
+					<path fill="#D34A47" d="M7.8,5.5l0.5-1.9l2.6-2.8l-0.7-0.6L7.4,3.2L6.9,5.4c-0.4,0-0.8,0-1.2,0c-2.9,0-5.3,0.3-5.3,0.7
+						c0,0.4,2.4,0.7,5.3,0.7c2.9,0,5.3-0.3,5.3-0.7C10.9,5.9,9.6,5.6,7.8,5.5"/>
+					<path fill="#FFFFFF" d="M7.5,6.5c0,0-0.1,0-0.4,0c-0.3,0-0.5,0-0.6-0.1c0,0,0-0.1,0-0.1c0-0.1,0-0.1,0.1-0.1l0,0.1c0,0,0,0,0,0
+						c0,0,0.3,0.1,0.5,0.1c0.2,0,0.5,0,0.5-0.1c0,0,0,0-0.1,0l0-0.1c0.1,0,0.1,0.1,0.1,0.1C7.7,6.5,7.6,6.5,7.5,6.5"/>
+					<path fill="#D34A47" d="M10.9,0.9c0.1-0.1,0-0.3-0.2-0.4c-0.2-0.2-0.4-0.2-0.5-0.2c-0.1,0.1,0,0.3,0.2,0.4C10.6,0.9,10.8,0.9,10.9,0.9
+						"/>
+					<path fill="#D34A47" d="M8.4,13.9c-0.1-0.6,1.3-1.5,1-1.5c-0.8,0-1.1,0.9-1.5,1.8c-0.1,0.3-0.6,1.7-0.9,1.5c-0.3-0.2,0.4-1.3,0.6-2
+						c-0.2,0.2-1.1,0.8-1.3,0.2c-0.4,0.3-1.1,0.5-1-0.3C5,13.9,4.5,14.4,4,14.2c-0.7-0.3,0.4-2.4,0.6-2.3c0.3,0.1-0.1,0.6-0.1,0.8
+						c-0.2,0.4-0.4,0.9-0.3,1c0.2,0.2,0.9-0.7,0.9-0.7c0.1-0.2,0.5-1.2,0.7-1.1c0.3,0.1-0.7,1.5-0.3,1.8c0.1,0.1,0.4,0,0.6-0.2
+						c0.1-0.1,0.1-0.4,0.5-1.4c0.4-0.9,0.7-2.1,1-2c0.3,0.1,0,0.7,0,0.9c-0.5,1.1-1.2,2.8-0.9,2.7c0.4-0.1,0.6-0.1,0.9-0.6
+						C8,12.7,8,12,8.3,12c0.2,0,0.2,0.2,0.1,0.4c0.2-0.3,1.1-0.8,1.3-0.3c0.3,0.7-1.3,1.7-0.9,1.6c0.4,0,1-0.4,1.2-0.8l0.7-6.4
+						c0,0-0.7,0.6-5.3,0.6C1,7.2,0.4,6.6,0.4,6.6L1,12.4C1.3,11.5,2,9.7,3.3,9.7c0.5,0,1.3,1.1,0.7,1.1c-0.3,0-0.3-0.5-0.6-0.6
+						c-0.2-0.1-0.5,0.1-0.7,0.3c-0.4,0.4-1.3,2-1.2,2.7c0.1,1,1.4-0.3,1.6-0.7c0.1-0.3,0.2-1.1,0.6-1c0.3,0.1,0,0.9-0.3,1.7
+						C3,14.1,2.9,15,2.6,14.9c-0.3-0.1,0.2-1.2,0.2-1.4c-0.3,0.3-0.9,1-1.6,0.6l0.4,3.6c0,0,1,0.8,4,0.8s4-0.8,4-0.8l0.5-4.2
+						C9.7,13.9,8.4,14.6,8.4,13.9"/>
+				</g>
+			</symbol>
+
+			<symbol id="html5" viewBox="0 0 20.7 24">
+				<g>
+					<path fill="#E44D26" d="M2,21.2l-1.7-21h20.1l-1.7,21l-8.4,2.5L2,21.2z"/>
+					<path fill="#F16529" d="M18.8,1.9h-8.4v20.6l6.7-2.1L18.8,1.9z"/>
+					<path fill="#FFFFFF" d="M4.9,12.4l-0.8-8h13L16.7,7H6.6L7,9.9h9.2l-0.8,8l-5,1.7l-5-1.7l-0.4-4.2h2.5l0.4,2.1l2.5,0.8l2.5-0.8l0.4-3.4
+						H4.9z"/>
+				</g>
+			</symbol>
+
+			<symbol id="jquery" viewBox="0 0 24 24">
+				<g transform="matrix(.945094 0 0 .945094 6.301403 4.347014)">
+					<path fill="#0868AC" d="M-1-0.4c-1.4,2.1-1.3,4.8-0.2,7.1l0.1,0.2l0.1,0.1C-1,7-1,7-1,7C-1,7-1,7.1-1,7.1l0.1,0.2l0.1,0.1l0.1,0.2
+						l0.1,0.1c0.1,0.1,0.1,0.2,0.2,0.3c0,0,0,0,0,0c0,0,0,0,0,0C-0.4,8-0.3,8.1-0.3,8.2l0.1,0.1l0.1,0.2L0,8.5c0.1,0.1,0.1,0.2,0.2,0.2
+						l0,0c0,0,0,0,0,0C0.3,8.9,0.4,8.9,0.4,9l0.1,0.1l0.2,0.2l0.1,0.1C0.8,9.4,0.9,9.4,1,9.5l0,0l0.2,0.2l0.1,0.1l0.2,0.1L1.6,10
+						l0.3,0.2c0,0,0,0,0,0c0.1,0,0.1,0.1,0.2,0.1l0.1,0.1l0.3,0.2l0.1,0l0.2,0.1c0,0,0.1,0,0.1,0.1L3,10.9l0,0l0.1,0l0.3,0.1l0.1,0
+						c0.1,0,0.2,0.1,0.3,0.1l0.1,0l0.3,0.1l0,0c0.1,0,0.2,0.1,0.3,0.1l0.1,0c0.1,0,0.2,0.1,0.3,0.1c7,1.3,9-4.3,9-4.3
+						c-1.7,2.3-4.7,2.8-7.6,2.2C6.1,9.5,6,9.5,5.9,9.4l-0.1,0c-0.1,0-0.2-0.1-0.3-0.1l0,0c-0.1,0-0.2-0.1-0.3-0.1l-0.1,0
+						C5,9.1,4.9,9.1,4.8,9L4.8,9L4.5,8.9l-0.1,0c-0.1,0-0.1-0.1-0.2-0.1L4.1,8.7C4.1,8.7,4,8.6,3.9,8.6l-0.1,0C3.7,8.5,3.6,8.4,3.5,8.3
+						c0,0-0.1,0-0.1-0.1L3.3,8.1l-0.1,0L3,7.9L2.9,7.9L2.7,7.7L2.6,7.7L2.4,7.5c0,0,0,0,0,0C2.3,7.4,2.2,7.3,2.1,7.2L2.1,7.2L1.9,7
+						L1.8,6.9C1.8,6.9,1.7,6.8,1.6,6.7c0,0,0,0,0,0C1.6,6.6,1.5,6.5,1.4,6.5L1.4,6.4L1.2,6.2L1.2,6.1L1,5.9c-1.6-2.2-2.2-5.2-0.9-7.7
+						M3.4-2.2c-1,1.5-1,3.6-0.2,5.2c0.1,0.3,0.3,0.5,0.5,0.8C3.9,4,4,4.3,4.3,4.5c0.1,0.1,0.2,0.2,0.2,0.2c0,0,0,0,0.1,0.1
+						C4.6,4.9,4.7,4.9,4.8,5c0,0,0,0,0,0C4.9,5.1,5,5.2,5.1,5.3l0.1,0.1c0.1,0.1,0.2,0.1,0.3,0.2c0,0,0,0,0,0c0,0,0.1,0.1,0.1,0.1
+						c0,0,0,0,0.1,0c0.1,0,0.1,0.1,0.2,0.1l0,0l0.2,0.1c0,0,0,0,0.1,0L6.3,6c0,0,0,0,0,0c0.1,0,0.2,0.1,0.3,0.1c0,0,0,0,0.1,0
+						c0.1,0,0.2,0.1,0.2,0.1l0.1,0c0.1,0,0.1,0.1,0.2,0.1l0.1,0c0.1,0,0.2,0.1,0.3,0.1c5.4,0.9,6.6-3.3,6.6-3.3C13.1,4.9,10.9,5.6,8.6,5
+						C8.5,5,8.4,5,8.3,4.9c0,0-0.1,0-0.1,0c-0.1,0-0.1,0-0.2-0.1l-0.1,0c-0.1,0-0.2-0.1-0.2-0.1c0,0,0,0-0.1,0c-0.1,0-0.2-0.1-0.3-0.1
+						c0,0-0.1,0-0.1-0.1l-0.1,0C7,4.4,7,4.4,6.9,4.3l0,0c-0.1,0-0.1-0.1-0.2-0.1c0,0,0,0-0.1,0L6.5,4C6.4,4,6.3,3.9,6.2,3.8L6.1,3.8
+						c-1-0.8-1.8-1.9-2.2-3.2c-0.4-1.3-0.3-2.8,0.4-4 M7.2-3.5C6.6-2.6,6.5-1.4,6.9-0.4c0.4,1.1,1.4,1.9,2.4,2.3c0,0,0.1,0,0.1,0l0.1,0
+						C9.6,2,9.7,2,9.8,2c3,0.6,3.8-1.5,4-1.9c-0.7,1-1.9,1.3-3.3,0.9c-0.1,0-0.2-0.1-0.4-0.1C9.9,0.9,9.8,0.9,9.6,0.8
+						C9.4,0.7,9.1,0.5,8.9,0.3c-1.3-1-2.1-2.9-1.3-4.5"/>
+					<g>
+						<path fill="#FFFFFF" d="M0.6,16l-0.2,0.7L0.6,16L0.6,16z M1.7,17.6l-0.2,0L1.7,17.6z M1.6,18.6l-1.3,0L1.6,18.6z M1.9,17.6l-0.2,0
+							L1.9,17.6z M1.7,18.5L2,17.7L1.7,18.5z M6.6,14.5l-0.4,2L6.6,14.5z M5.5,14.5L5.2,16L5.5,14.5z"/>
+						<path fill="#FFFFFF" d="M6.5,14.4H5.6c-0.1,0-0.1,0-0.1,0.1l-0.7,3c0,0-0.1,0.1-0.1,0.1H4.1c-0.6,0-0.6-0.4-0.4-1.1l0,0l0.1-0.4
+							l0-0.2l0.3-1.5c0-0.1,0-0.1-0.1-0.1H3.1c-0.1,0-0.1,0-0.1,0.1l-0.4,2c-0.2,1.1-0.2,2.1,1.1,2.1l0,0h2c0.1,0,0.1,0,0.1-0.1
+							L6.5,14.4C6.6,14.4,6.6,14.4,6.5,14.4L6.5,14.4z M10.2,17.6C10.3,17.6,10.3,17.6,10.2,17.6l0,0.5 M10.1,18.6l0.1-0.4L10.1,18.6z
+							M10,18.7l-1.7,0L10,18.7z"/>
+						<path fill="#FFFFFF" d="M7.8,17c0,0,0.1-0.1,0.1-0.1l-0.1,0C7.7,17.4,7.8,17,7.8,17z M8.4,18.7L8.4,18.7L8.4,18.7z M10.2,17.6
+							C10.3,17.6,10.3,17.6,10.2,17.6l0,0.6 M8.8,18.7L8.8,18.7L8.8,18.7z M8.6,18.7L8.6,18.7L8.6,18.7z M8.5,18.7L8.5,18.7L8.5,18.7z
+							M8.5,18.7L8.5,18.7L8.5,18.7z M8.6,18.7L8.6,18.7L8.6,18.7z"/>
+						<path fill="#FFFFFF" d="M8.8,18.7l-0.2,0C8.6,18.7,8.8,18.7,8.8,18.7z M10,18.7l-1.2,0L10,18.7z M10.1,18.6l0.1-0.4L10.1,18.6
+							L10.1,18.6z M8.5,18.7L8.5,18.7L8.5,18.7L8.5,18.7z M8.4,18.7L8.4,18.7L8.4,18.7z M8.4,18.7L8.4,18.7L8.4,18.7z M-5,17l0.1-0.6
+							L-5,17l0,0.2L-5,17L-5,17z M-3.3,14.4h-1c-0.1,0-0.1,0-0.1,0.1l-0.2,0.8c0,0,0,0.1,0,0.1c0,0,0,0,0,0h1c0.1,0,0.1,0,0.1-0.1
+							L-3.3,14.4C-3.2,14.4-3.3,14.4-3.3,14.4L-3.3,14.4z M-3.5,15.8l-0.3,1.4L-3.5,15.8z M-6.5,20.3l0.8,0C-5.9,20.3-6.3,20.3-6.5,20.3
+							L-6.5,20.3z"/>
+						<path fill="#FFFFFF" d="M-4.7,15.8l-0.1,0.6L-4.7,15.8z M-3.6,15.7h-1c-0.1,0-0.1,0-0.1,0.1L-5,17l0,0.2l-0.3,1.3c0,0.1,0,0.1,0,0.2
+							c0,0-0.2,0.6-0.5,0.6l-0.3,0c-0.1,0-0.1,0-0.1,0.1l-0.2,0.9c0,0,0,0.1,0,0.1c0,0,0,0,0,0l0.8,0c0.8,0,1.2-0.4,1.5-1.7L-3.6,15.7
+							C-3.5,15.7-3.6,15.7-3.6,15.7L-3.6,15.7z M10.9,18.6C10.8,18.6,10.8,18.6,10.9,18.6l0.7-3.7 M11.9,18.5l0.3-1.5L11.9,18.5z"/>
+						<path fill="#FFFFFF" d="M10.8,18.6c0,0,0-0.1,0-0.1l0.4-1.7L10.8,18.6C10.8,18.6,10.8,18.6,10.8,18.6l0.2,0
+							C10.9,18.6,10.8,18.6,10.8,18.6z M11.9,18.6c0,0-0.1,0-0.1,0L11.9,18.6C11.9,18.6,11.9,18.6,11.9,18.6l0.1-0.2
+							C11.9,18.5,11.9,18.6,11.9,18.6L11.9,18.6z M12.1,17.8l0.1-0.7L12.1,17.8z M15.1,15.2l0,0.2c0,0,0,0.1-0.1,0.1"/>
+						<path fill="#FFFFFF" d="M11.9,18.4l0.1-0.7L11.9,18.4z M15.1,15l0,0.2L15.1,15z M12.2,17.1l0-0.2l0.1-0.7L12.2,17.1L12.2,17.1
+							L12.2,17.1z M11.6,14.9l0,0.1l-0.4,1.7L11.6,14.9L11.6,14.9L11.6,14.9z"/>
+						<path fill="#FFFFFF" d="M15.1,15.3l0-0.2L15,14.9c-0.1-0.3-0.3-0.5-0.9-0.5l-2.4,0c-0.1,0-0.1,0-0.1,0.1l0,0.2l-0.1,0.3l-0.7,3.5
+							c0,0.1,0,0.1,0,0.1c0,0,0.1,0,0.2,0h0.8c0.1,0,0.1,0,0.1,0c0,0,0.1-0.1,0.1-0.2l0.3-1.4l0.3-1.5c0,0,0.1-0.1,0.1-0.1L15.1,15.3
+							C15.1,15.4,15.2,15.4,15.1,15.3L15.1,15.3z M18.3,13.8l-0.2,0h-0.8c-0.1,0-0.1,0-0.1,0.1l-1.7,2.5c0,0-0.1,0-0.1,0l-0.1-0.6
+							c0-0.1-0.1-0.1-0.1-0.1H14c-0.1,0-0.1,0-0.1,0.1l0.5,1.7c0,0,0,0.1,0,0.2l-0.2,0.8c0,0,0,0.1,0,0.1c0,0,0,0,0,0h1.1
+							c0.1,0,0.1,0,0.1-0.1l0.2-0.8c0-0.1,0-0.1,0.1-0.2l2.8-3.7c0,0,0-0.1,0-0.1L18.3,13.8L18.3,13.8z M9.5,15.9C9.5,16,9.5,16,9.4,16
+							H8C8,16,7.9,16,8,16l0,0l0,0c0.1-0.4,0.4-0.6,0.9-0.6C9.5,15.3,9.6,15.6,9.5,15.9L9.5,15.9z M9.1,14.3c-1.8,0-2.2,1.1-2.4,2.2
+							c-0.2,1.1-0.2,2.2,1.6,2.2h0.3l0.2,0l1.2,0c0.1,0,0.1,0,0.1-0.1l0.2-0.9c0-0.1,0-0.1-0.1-0.1H8.5c-0.7,0-0.9-0.2-0.8-0.7h2.7
+							c0,0,0.1,0,0.1-0.1c0,0,0,0,0,0C10.9,15.3,10.8,14.3,9.1,14.3L9.1,14.3z M0.7,15.9L0.7,15.9c0,0.1-0.2,0.8-0.2,0.8l-0.2,0.7
+							c0,0.1-0.1,0.1-0.1,0.1h-1.1c-0.8,0-1-0.6-0.8-1.6c0.2-1,0.6-1.5,1.4-1.6C0.7,14.3,0.9,15,0.7,15.9L0.7,15.9z M1.4,17.5
+							c0,0,0.5-1.2,0.6-1.9c0.2-0.9-0.3-2.3-2.1-2.3c-1.8,0-2.6,1.3-2.9,2.7c-0.3,1.4,0.1,2.7,1.9,2.7l2.7,0c0.1,0,0.1,0,0.1-0.1L2,17.7
+							c0,0,0-0.1,0-0.1c0,0,0,0,0,0L1.4,17.5C1.4,17.6,1.4,17.5,1.4,17.5C1.4,17.5,1.4,17.5,1.4,17.5L1.4,17.5z"/>
+						<path fill="#FFFFFF" d="M10.3,16.7C10.3,16.7,10.3,16.7,10.3,16.7c-0.1,0.1-0.1,0-0.1,0S10.3,16.6,10.3,16.7
+							C10.3,16.6,10.3,16.6,10.3,16.7z"/>
+					</g>
+				</g>
+			</symbol>
+
+			<symbol id="js" viewBox="0 0 24 24">
+				<g>
+					<path fill="#FFCA28" d="M5.5,0.1h13c3,0,5.4,2.4,5.4,5.4v13c0,3-2.4,5.4-5.4,5.4h-13c-3,0-5.4-2.4-5.4-5.4v-13C0.1,2.5,2.5,0.1,5.5,0.1
+						z"/>
+					<path fill="#3E3E3E" d="M14.5,19.9l1.8-1.2c0.1,0.4,1,1.5,2.1,1.5c1.1,0,1.6-0.6,1.6-1c0-1.1-1.1-1.5-1.7-1.6c-0.1,0-0.2-0.1-0.2-0.1
+						c0,0-0.1,0-0.1,0c-0.6-0.2-2.8-1.1-2.8-3.5c0-2.7,2.6-3,3.2-3c0.4,0,2.2,0,3.2,1.8l-1.7,1.2c-0.4-0.8-1-1-1.4-1
+						c-0.9,0-1.1,0.7-1.1,1c0,0.9,1,1.3,1.9,1.6c0.2,0.1,0.4,0.2,0.6,0.3c0.9,0.4,2.3,1.2,2.3,3.5c0,1.1-1,3-3.4,3
+						C15.6,22.2,14.7,20.2,14.5,19.9z"/>
+					<path fill="#3E3E3E" d="M6.1,20.1L7.9,19c0.1,0.4,0.7,1.2,1.5,1.2c0.8,0,1.2-0.8,1.2-1.2v-7.8h2.2V19c0,1.1-0.6,3.2-3.2,3.2
+						C7.2,22.2,6.2,20.8,6.1,20.1z"/>
+				</g>
+			</symbol>
+
+			<symbol id="sass" viewBox="0 0 24 24">
+				<g>
+					<path fill="#CD6799" d="M20.5,13.3c-0.7,0-1.5,0.2-2.1,0.5c-0.2-0.3-0.4-0.7-0.5-1.1c-0.1-0.3-0.1-0.6,0-0.9c0.1-0.3,0.2-0.7,0.3-1
+					c0,0-0.1-0.2-0.5-0.3c-0.5,0-0.9,0.1-0.9,0.2c-0.1,0.2-0.1,0.5-0.2,0.7c-0.4,1-0.9,1.9-1.4,2.8c-0.3-0.5-0.4-1.1-0.4-1.7
+					c0.1-0.3,0.2-0.7,0.3-1c0,0-0.1-0.2-0.5-0.3c-0.5,0-0.9,0.1-0.9,0.2c0,0.1-0.1,0.4-0.2,0.7c-0.1,0.3-1.3,2.9-1.6,3.5
+					c-0.2,0.3-0.3,0.6-0.4,0.8l0,0c0,0,0,0,0,0c-0.1,0.2-0.1,0.2-0.1,0.2v0c-0.1,0.1-0.1,0.2-0.2,0.2c-0.1-0.2-0.1-0.5,0-0.7
+					c0.2-0.9,0.6-2.3,0.6-2.3c0,0,0.1-0.3-0.3-0.4c-0.2-0.1-0.4,0-0.5,0.1c0,0-0.1,0.1-0.1,0.1s0.4-1.6-0.7-1.6
+					c-0.9,0.2-1.6,0.7-2.1,1.4c-0.3,0.2-0.9,0.5-1.6,0.9c-0.3,0.1-0.5,0.3-0.8,0.4c0,0,0,0-0.1-0.1c-1.3-1.4-3.8-2.4-3.7-4.3
+					C2,9.8,2.2,8,6.6,5.8c3.6-1.8,6.5-1.3,7-0.2c0.7,1.6-1.5,4.5-5.3,4.9C7.5,10.6,6.7,10.4,6,9.9C5.8,9.7,5.8,9.6,5.7,9.7
+					c-0.1,0.1,0,0.3,0,0.4C6,10.6,6.5,11,7.1,11.1c1.5,0.3,3,0.2,4.4-0.4c2.3-0.9,4-3.3,3.5-5.4c-0.5-2.1-4-2.8-7.2-1.6
+					c-2,0.7-3.9,1.8-5.6,3.2c-1.8,1.7-2.1,3.1-2,3.8c0.4,2.2,3.4,3.6,4.6,4.6c-0.1,0-0.1,0.1-0.2,0.1c-0.6,0.3-2.9,1.5-3.5,2.8
+					c-0.6,1.4,0.1,2.5,0.6,2.6c1.5,0.4,3.1-0.3,4-1.6c0.7-1.1,0.8-2.5,0.4-3.7c0,0,0,0,0,0l0.5-0.3c0.3-0.2,0.6-0.3,0.9-0.5
+					c-0.2,0.5-0.3,1-0.3,1.6c-0.1,0.8,0.2,1.6,0.7,2.3c0.2,0.1,0.4,0.2,0.6,0.2c0.5,0,0.7-0.4,1-0.9c0.3-0.6,0.6-1.3,0.6-1.3
+					s-0.3,1.9,0.6,1.9c0.3,0,0.7-0.4,0.9-0.7v0c0,0,0,0,0,0l0.1-0.1v0c0.1-0.2,0.4-0.8,0.9-1.7c0.6-1.2,1.2-2.6,1.2-2.6
+					c0.1,0.3,0.1,0.6,0.2,1c0.1,0.4,0.3,0.7,0.5,1.1c-0.1,0.2-0.2,0.3-0.2,0.3l0,0c-0.1,0.1-0.2,0.3-0.4,0.5c-0.4,0.4-0.8,0.9-1.1,1.4
+					c-0.1,0.2-0.1,0.4,0.1,0.5c0.2,0.1,0.4,0.1,0.6,0.1c0.3,0,0.6-0.1,0.9-0.2c0.3-0.1,0.5-0.2,0.7-0.4c0.5-0.3,0.8-0.9,0.7-1.5
+					c0-0.4-0.1-0.7-0.3-1c0-0.1,0.1-0.1,0.1-0.2c0.5-0.7,0.9-1.5,1.3-2.2c0.1,0.3,0.1,0.6,0.2,1c0.1,0.3,0.3,0.6,0.4,0.9
+					c-0.6,0.4-1,1-1.3,1.6c-0.3,0.8-0.1,1.1,0.3,1.2c0.2,0,0.4,0,0.6-0.1c0.3-0.1,0.6-0.2,0.8-0.4c0.5-0.3,0.9-0.9,0.9-1.5
+					c0-0.3-0.1-0.6-0.2-0.9c0.7-0.3,1.5-0.4,2.3-0.3c2.1,0.2,2.5,1.5,2.4,2.1c-0.1,0.4-0.3,0.7-0.7,0.9c-0.1,0.1-0.2,0.1-0.2,0.2
+					c0,0.1,0.1,0.1,0.2,0.1c0.6-0.2,1.1-0.8,1.1-1.4C23.9,14.7,22.7,13.3,20.5,13.3L20.5,13.3z M4.7,18.7c-0.7,0.7-1.6,1-2,0.8
+					c-0.4-0.3-0.3-1.3,0.6-2.1c0.5-0.4,1-0.8,1.6-1.2c0.1-0.1,0.2-0.1,0.4-0.3l0,0l0,0l0.1-0.1C5.7,16.8,5.4,17.9,4.7,18.7z M9.6,15.3
+					c-0.2,0.6-0.7,2.1-1,2c-0.3-0.1-0.4-1.2-0.1-2.3c0.2-0.5,0.5-1,0.8-1.5c0.4-0.4,0.8-0.6,0.9-0.4C10.2,13.9,10,14.6,9.6,15.3
+					L9.6,15.3z M13.7,17.3c-0.1,0.1-0.2,0.1-0.2,0.1c0,0,0-0.1,0-0.1s0.5-0.6,0.7-0.8c0.1-0.1,0.3-0.3,0.4-0.5V16
+					C14.7,16.6,14,17.1,13.7,17.3L13.7,17.3z M16.9,16.5c-0.1-0.1-0.1-0.2,0.2-0.8c0.2-0.3,0.4-0.7,0.7-0.9c0,0.1,0.1,0.3,0.1,0.4
+					C17.9,15.9,17.5,16.4,16.9,16.5L16.9,16.5z"/>
+				</g>
+			</symbol>
+
+			<symbol id="zeplin" viewBox="0 0 24 24">
+				<g>
+					<path fill="#FDBD39" d="M3.8,15.6L2.6,16l-0.1,3.7l4.3-1.6C5.3,17.7,4.2,16.8,3.8,15.6"/>
+					<path fill="#F69833" d="M4.5,11.7l-4.3,1.6L2.6,16l1.2-0.5C3.4,14.4,3.6,13,4.5,11.7"/>
+					<path fill="#FECF33" d="M11.7,6.4c-5.5,2-9,6.1-7.9,9.2l19.8-7.2C22.5,5.3,17.2,4.4,11.7,6.4"/>
+					<path fill="#EE6723" d="M15.8,17.6c5.5-2,9-6.1,7.9-9.2L3.8,15.6C4.9,18.7,10.3,19.6,15.8,17.6"/>
+					<path fill="#F69833" d="M23.6,8.3L3.8,15.6c0.4,1.1,1.9,1.6,3.9,1.6c2,0,4.6-0.5,7.3-1.5C20.6,13.7,24.4,10.5,23.6,8.3"/>
+					<path fill="#FDBD39" d="M19.7,6.7c-2,0-4.6,0.5-7.3,1.5c-5.5,2-9.3,5.2-8.6,7.4l19.8-7.2C23.2,7.3,21.8,6.7,19.7,6.7"/>
+					<path fill="#EE6723" d="M18.6,19.9L18.6,19.9c-0.6,0-1.4-0.5-2.6-1.6c-1.3-1.2-2.8-3-4.3-5.1c-1.4-2-2.6-4.1-3.3-5.7
+						C7.7,5.7,7.6,4.6,8.2,4.2c0.1-0.1,0.3-0.1,0.4-0.1C9,4.1,9.9,4.4,11.5,6l0,0l0,0c0,0.1,0,0.2,0,0.3l0,0.2l-0.2-0.2
+						C9.6,4.8,8.9,4.6,8.6,4.6c-0.1,0-0.1,0-0.2,0c-0.2,0.2-0.3,1,0.5,2.7C9.6,9,10.8,11,12.2,13c1.4,2,2.9,3.8,4.2,5
+						c1.4,1.3,2,1.4,2.2,1.4c0.1,0,0.1,0,0.2,0c0.3-0.2,0.3-1.1-0.6-2.9l0-0.1l0.1,0c0.1,0,0.2-0.1,0.2-0.1l0.1-0.1l0,0.1
+						c0.6,1.3,1.1,3,0.4,3.5C18.9,19.9,18.8,19.9,18.6,19.9L18.6,19.9z M18.6,19.7L18.6,19.7l0,0.1L18.6,19.7z"/>
+					<path fill="#EE6723" d="M15.9,17.5l0,0.1c-0.1,1.7-0.5,3.8-1.5,3.9c0,0,0,0-0.1,0c-0.6,0-1.3-0.9-1.8-2.7c-0.5-1.7-0.9-4-1.2-6.5
+						c-0.2-2.5-0.2-4.8,0-6.6c0.2-2,0.7-3,1.4-3c0,0,0,0,0.1,0c0.5,0,1.2,0.5,1.9,3l-0.5,0.1c-0.2-0.8-0.5-1.5-0.8-2
+						C13.3,3.2,13,3,12.8,3c0,0,0,0,0,0c-0.3,0-0.7,0.7-0.9,2.6c-0.2,1.8-0.2,4.1,0,6.5c0.2,2.5,0.6,4.7,1.1,6.4
+						c0.2,0.8,0.5,1.4,0.7,1.8c0.2,0.4,0.5,0.6,0.6,0.6c0,0,0,0,0,0c0.3,0,0.8-0.8,1-3.3L15.9,17.5"/>
+				</g>
+			</symbol>
+
+			<symbol id="none" viewBox="0 0 24 24">
+				<g>
+
+				</g>
+			</symbol>
+
+		</svg>
+
+		<div class="wrapper">
+
+			<div class="preloader">
+				<div class="deecode-logo">Deecode</div>
+			</div>
+
+			<span id="top"></span>
+
+			<!-- Header -->
+			<header class="header" id="header">
+				<div class="container-fluid">
+
+					<div class="header__main header-main d-lg-none">
+						<div class="container">
+							<div class="header-main__row">
+								<div class="header-main__logo deecode-logo-wrap">
+									<a class="deecode-logo" href="#">Deecode</a>
+								</div>
+								<button class="nav-button d-flex align-items-center d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navToggle" aria-expanded="false" aria-controls="navToggle">
+									<div class="nav-anim"><span></span><span></span><span></span><span></span></div>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="header__menu menu collapse d-lg-none" id="navToggle">
+						<div class="container">
+							<div class="menu__wrapper">
+								<nav class="menu__nav">
+									<ul class="menu__list">
+										<li><a class="menu__link" href="#" data-scroll="#top">Главная</a></li>
+										<li><a class="menu__link" href="#" data-scroll="#skills">Навыки</a></li>
+										<li><a class="menu__link" href="#" data-scroll="#projects">Проекты</a></li>
+										<li><a class="menu__link" href="#" data-scroll="#footer">Контакты</a></li>
+										<li>
+											<a class="menu__link footer__phone d-flex align-items-center" href="tel:+79040717774">
+												<span class='icon'><svg class='icon__item'><use xlink:href='#call'></use></svg></span>
+												8 (904) 071 77-74
+											</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+
+					<div class="header__desc header-desc d-none d-lg-block">
+						<div class="container">
+							<div class="header-desc__row">
+								<div class="header-desc__col">
+									<div class="header-desc__logo deecode-logo-wrap">
+										<a class="deecode-logo" href="/">Deecode</a>
+									</div>
+								</div>
+								<div class="header-desc__col">
+									<ul class="header-desc__list">
+										<li><a class="menu__link" href="#" data-scroll="#top">Главная</a></li>
+										<li><a class="menu__link" href="#" data-scroll="#skills">Навыки</a></li>
+										<li><a class="menu__link" href="#" data-scroll="#projects">Проекты</a></li>
+										<li><a class="menu__link" href="#" data-scroll="#footer">Контакты</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</header> <!-- header -->
+
+			<div id="headerTop"></div>
+
+			<main class="main">
+
+				<!-- Intro -->
+				<section class="intro" id="#intro">
+					<div class="container">
+
+						<div class="intro__body">
+							<div class="intro__content d-flex flex-column align-items-center">
+
+								<div class="intro__photo" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="50" data-aos-anchor="#headerTop">
+									<img src="img/photo.jpg" alt="фото">
+								</div>
+	
+								<h1 class="intro__title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150" data-aos-anchor="#headerTop"><span>Дмитрий</span> <span>-</span> Frontend-разработчик & Дизайнер</h1>
+								<h2 class="intro__subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="250" data-aos-anchor="#headerTop">Помогаю компаниям создавать успешные онлайн-продукты. От разработки сайтов с нуля до редизайна существующих – я предлагаю комплексные решения, основанные на проверенном опыте.</h2>
+
+							</div>
+						</div>
+
+						<!-- Skills -->
+						<div class="skills" id="skills">
+							<div class="container">
+								<div class="skills__body">
+
+									<h2 class="skills__title title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="50" data-aos-anchor=".skills">Навыки</h2>
+
+									<div class="skills__icons row flex-column">
+										<div class="col">
+											<div class='icon' data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="150" data-aos-anchor=".skills"><svg class='icon__item'><use xlink:href='#html5'></use></svg></div>
+											<div class='icon' data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="200" data-aos-anchor=".skills"><svg class='icon__item'><use xlink:href='#css3'></use></svg></div>
+											<div class='icon' data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="250" data-aos-anchor=".skills"><svg class='icon__item'><use xlink:href='#js'></use></svg></div>
+											<div class='icon' data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="300" data-aos-anchor=".skills"><svg class='icon__item'><use xlink:href='#bootstrap'></use></svg></div>
+											<div class='icon' data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="350" data-aos-anchor=".skills"><svg class='icon__item'><use xlink:href='#jquery'></use></svg></div>
+											<div class='icon' data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="400" data-aos-anchor=".skills"><svg class='icon__item'><use xlink:href='#sass'></use></svg></div>
+											<div class='icon' data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="450" data-aos-anchor=".skills"><svg class='icon__item'><use xlink:href='#gulp'></use></svg></div>
+										</div>
+										<div class="col">
+											<div class='icon' data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="500" data-aos-anchor=".skills"><svg class='icon__item'><use xlink:href='#illustrator'></use></svg></div>
+											<div class='icon' data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="550" data-aos-anchor=".skills"><svg class='icon__item'><use xlink:href='#adobe-xd'></use></svg></div>
+											<div class='icon' data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="600" data-aos-anchor=".skills"><svg class='icon__item'><use xlink:href='#photoshop'></use></svg></div>
+											<div class='icon' data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="650" data-aos-anchor=".skills"><svg class='icon__item'><use xlink:href='#zeplin'></use></svg></div>
+											<div class='icon' data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="700" data-aos-anchor=".skills"><svg class='icon__item'><use xlink:href='#figma'></use></svg></div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div> <!-- .intro -->
+
+					</div>
+				</section> <!-- section/intro -->
+
+
+
+
+				<!-- Projects -->
+				<section class="projects" id="projects">
+					<div class="container">
+						<div class="projects__body">
+
+							<h2 class="projects__title title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150" data-aos-anchor=".projects">Проекты</h2>
+
+							<ul class="projects__tab-nav projects-nav nav nav-pills" id="pills-tab" role="tablist">
+								<li class="projects-nav__item nav-item" role="presentation" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="250" data-aos-anchor=".projects">
+									<button class="projects-nav__link btn-main nav-link active" id="pills-attractedClients-tab"
+										data-bs-toggle="pill" data-bs-target="#pills-attractedClients" type="button" role="tab"
+										aria-controls="pills-attractedClients" aria-selected="true">Сайты</button>
+								</li>
+								<li class="projects-nav__item nav-item" role="presentation" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="300" data-aos-anchor=".projects">
+									<button class="projects-nav__link btn-main nav-link" id="pills-transactionHistory-tab"
+										data-bs-toggle="pill" data-bs-target="#pills-transactionHistory" type="button" role="tab"
+										aria-controls="pills-transactionHistory" aria-selected="true">Дизайн</button>
+								</li>
+							</ul>
+
+							<div class="projects__tabs tab-content row gx-0" id="pills-tabContent">
+
+								<section class="projects__tab projects-tab tab-pane fade show active" id="pills-attractedClients" role="tabpanel" aria-labelledby="pills-attractedClients-tab">
+									<div class="projects-tab__body">
+										<div class="projects-tab__row row d-flex justify-content-center align-items-center">
+
+											<div class="projects-tab__col col-12 col-sm-6">
+												<div class="projects-tab__item">
+													<a class="projects-tab__img" href="https://deec0.github.io/Newbouquet/" target="_blank">
+														<img src="img/sites/1.png" alt="скриншот сайта">
+													</a>
+													<a class="projects-tab__description" href="https://deec0.github.io/Newbouquet/" target="_blank">
+														<span class="projects-tab__text">Нажмите здесь, чтобы перейти</span>
+														<h3 class="projects-tab__title">Новый букет</h3>
+														<img class="projects-tab__icon" src="img/icons/arrow.svg" alt="arrow">
+													</a>
+												</div>
+											</div>
+
+											<div class="projects-tab__col col-12 col-sm-6">
+												<div class="projects-tab__item">
+													<a class="projects-tab__img" href="https://deec0.github.io/YourComfort55/" target="_blank">
+														<img src="img/sites/2.png" alt="скриншот сайта">
+													</a>
+													<a class="projects-tab__description" href="https://deec0.github.io/YourComfort55/" target="_blank">
+														<span class="projects-tab__text">Нажмите здесь, чтобы перейти</span>
+														<h3 class="projects-tab__title">Ваш Комфорт</h3>
+														<img class="projects-tab__icon" src="img/icons/arrow.svg" alt="arrow">
+													</a>
+												</div>
+											</div>
+
+											<div class="projects-tab__col col-12 col-sm-6">
+												<div class="projects-tab__item">
+													<a class="projects-tab__img" href="https://deec0.github.io/SMR/" target="_blank">
+														<img src="img/sites/3.png" alt="скриншот сайта">
+													</a>
+													<a class="projects-tab__description" href="https://deec0.github.io/SMR/" target="_blank">
+														<span class="projects-tab__text">Нажмите здесь, чтобы перейти</span>
+														<h3 class="projects-tab__title">SMR</h3>
+														<img class="projects-tab__icon" src="img/icons/arrow.svg" alt="arrow">
+													</a>
+												</div>
+											</div>
+
+											<div class="projects-tab__col col-12 col-sm-6">
+												<div class="projects-tab__item">
+													<a class="projects-tab__img" href="https://deec0.github.io/IAUTORF/" target="_blank">
+														<img src="img/sites/4.png" alt="скриншот сайта">
+													</a>
+													<a class="projects-tab__description" href="https://deec0.github.io/IAUTORF/" target="_blank">
+														<span class="projects-tab__text">Нажмите здесь, чтобы перейти</span>
+														<h3 class="projects-tab__title">ЯАВТО.РФ</h3>
+														<img class="projects-tab__icon" src="img/icons/arrow.svg" alt="arrow">
+													</a>
+												</div>
+											</div>
+
+											<div class="projects-tab__col col-12 col-sm-6">
+												<div class="projects-tab__item">
+													<a class="projects-tab__img" href="https://deec0.github.io/IAuto_Referal-Carpark/" target="_blank">
+														<img src="img/sites/5.png" alt="скриншот сайта">
+													</a>
+													<a class="projects-tab__description" href="https://deec0.github.io/IAuto_Referal-Carpark/" target="_blank">
+														<span class="projects-tab__text">Нажмите здесь, чтобы перейти</span>
+														<h3 class="projects-tab__title">ЯАВТО.РФ для автопарков</h3>
+														<img class="projects-tab__icon" src="img/icons/arrow.svg" alt="arrow">
+													</a>
+												</div>
+											</div>
+
+											<div class="projects-tab__col col-12 col-sm-6">
+												<div class="projects-tab__item">
+													<a class="projects-tab__img" href="https://deec0.github.io/IAuto_Referal/" target="_blank">
+														<img src="img/sites/6.png" alt="скриншот сайта">
+													</a>
+													<a class="projects-tab__description" href="https://deec0.github.io/IAuto_Referal/" target="_blank">
+														<span class="projects-tab__text">Нажмите здесь, чтобы перейти</span>
+														<h3 class="projects-tab__title">ЯАВТО.РФ для реферальных партнеров</h3>
+														<img class="projects-tab__icon" src="img/icons/arrow.svg" alt="arrow">
+													</a>
+												</div>
+											</div>
+
+											<div class="projects-tab__col col-12 col-sm-6">
+												<div class="projects-tab__item">
+													<a class="projects-tab__img" href="https://deec0.github.io/KrasnyySushiTown/" target="_blank">
+														<img src="img/sites/7.png" alt="скриншот сайта">
+													</a>
+													<a class="projects-tab__description" href="https://deec0.github.io/KrasnyySushiTown/" target="_blank">
+														<span class="projects-tab__text">Нажмите здесь, чтобы перейти</span>
+														<h3 class="projects-tab__title">Красный Суши Таун</h3>
+														<img class="projects-tab__icon" src="img/icons/arrow.svg" alt="arrow">
+													</a>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</section>
+
+								<section class="projects__tab projects-tab tab-pane fade" id="pills-transactionHistory" role="tabpanel" aria-labelledby="pills-transactionHistory-tab">
+									<div class="projects-tab__body">
+										<div class="projects-tab__row row d-flex justify-content-center align-items-center">
+
+											<div class="projects-tab__col col-12 col-sm-6">
+												<div class="projects-tab__item">
+													<a class="projects-tab__img" href="https://www.figma.com/design/HPpjcnhZDxqalFHd6xnmOg/SMM-Dream?node-id=0-1&t=zq2wAFMy4SDpgpOj-1" target="_blank">
+														<img src="img/design/1.png" alt="скриншот сайта">
+													</a>
+													<a class="projects-tab__description" href="https://www.figma.com/design/HPpjcnhZDxqalFHd6xnmOg/SMM-Dream?node-id=0-1&t=zq2wAFMy4SDpgpOj-1" target="_blank">
+														<span class="projects-tab__text">Нажмите здесь, чтобы перейти</span>
+														<h3 class="projects-tab__title">SMM Dream</h3>
+														<img class="projects-tab__icon" src="img/icons/arrow.svg" alt="arrow">
+													</a>
+												</div>
+											</div>
+
+											<div class="projects-tab__col col-12 col-sm-6">
+												<div class="projects-tab__item">
+													<a class="projects-tab__img" href="https://www.figma.com/design/CdtgwyNdFWwqmcagOcuVC5/SMM-Dream-%D0%9B%D0%9A?node-id=0-1&t=QND8n8MO9asktHZw-1" target="_blank">
+														<img src="img/design/2.png" alt="скриншот сайта">
+													</a>
+													<a class="projects-tab__description" href="https://www.figma.com/design/CdtgwyNdFWwqmcagOcuVC5/SMM-Dream-%D0%9B%D0%9A?node-id=0-1&t=QND8n8MO9asktHZw-1" target="_blank">
+														<span class="projects-tab__text">Нажмите здесь, чтобы перейти</span>
+														<h3 class="projects-tab__title">SMM Dream Личный кабинет</h3>
+														<img class="projects-tab__icon" src="img/icons/arrow.svg" alt="arrow">
+													</a>
+												</div>
+											</div>
+
+											<div class="projects-tab__col col-12 col-sm-6">
+												<div class="projects-tab__item">
+													<a class="projects-tab__img" href="https://www.figma.com/design/Inxbpne6icGSPcOyYoQQfS/ITLAW?node-id=0-1&t=i2bF0TY64LKQnB1k-1" target="_blank">
+														<img src="img/design/3.png" alt="скриншот сайта">
+													</a>
+													<a class="projects-tab__description" href="https://www.figma.com/design/Inxbpne6icGSPcOyYoQQfS/ITLAW?node-id=0-1&t=i2bF0TY64LKQnB1k-1" target="_blank">
+														<span class="projects-tab__text">Нажмите здесь, чтобы перейти</span>
+														<h3 class="projects-tab__title">ITLAW</h3>
+														<img class="projects-tab__icon" src="img/icons/arrow.svg" alt="arrow">
+													</a>
+												</div>
+											</div>
+
+											<div class="projects-tab__col col-12 col-sm-6">
+												<div class="projects-tab__item">
+													<a class="projects-tab__img" href="https://www.figma.com/design/Eeo9ttiP9anKirttiEA9d3/%D0%92%D0%B0%D1%88%D0%9A%D0%BE%D0%BC%D1%84%D0%BE%D1%80%D1%8255?node-id=0-1&t=GCCBDtVoGGLWapb2-1" target="_blank">
+														<img src="img/design/4.png" alt="скриншот сайта">
+													</a>
+													<a class="projects-tab__description" href="https://www.figma.com/design/Eeo9ttiP9anKirttiEA9d3/%D0%92%D0%B0%D1%88%D0%9A%D0%BE%D0%BC%D1%84%D0%BE%D1%80%D1%8255?node-id=0-1&t=GCCBDtVoGGLWapb2-1" target="_blank">
+														<span class="projects-tab__text">Нажмите здесь, чтобы перейти</span>
+														<h3 class="projects-tab__title">Ваш Комфорт</h3>
+														<img class="projects-tab__icon" src="img/icons/arrow.svg" alt="arrow">
+													</a>
+												</div>
+											</div>
+
+											<div class="projects-tab__col col-12 col-sm-6">
+												<div class="projects-tab__item">
+													<a class="projects-tab__img" href="https://www.figma.com/design/I4zDb8RnagBBglqbyjbyAK/Re-Work?node-id=0-1&t=rp5kvyfKJOLDkhte-1" target="_blank">
+														<img src="img/design/5.png" alt="скриншот сайта">
+													</a>
+													<a class="projects-tab__description" href="https://www.figma.com/design/I4zDb8RnagBBglqbyjbyAK/Re-Work?node-id=0-1&t=rp5kvyfKJOLDkhte-1" target="_blank">
+														<span class="projects-tab__text">Нажмите здесь, чтобы перейти</span>
+														<h3 class="projects-tab__title">ReWork</h3>
+														<img class="projects-tab__icon" src="img/icons/arrow.svg" alt="arrow">
+													</a>
+												</div>
+											</div>
+
+											<div class="projects-tab__col col-12 col-sm-6">
+												<div class="projects-tab__item">
+													<a class="projects-tab__img" href="https://www.figma.com/design/CSXAsrKlIZEs1Hb67D8uNO/%D0%9C%D0%B8%D0%BD%D0%B8%D1%81%D0%B2%D0%B0%D0%B8?node-id=0-1&t=AJ8UPUAzX2RGzCCM-1" target="_blank">
+														<img src="img/design/6.png" alt="скриншот сайта">
+													</a>
+													<a class="projects-tab__description" href="https://www.figma.com/design/CSXAsrKlIZEs1Hb67D8uNO/%D0%9C%D0%B8%D0%BD%D0%B8%D1%81%D0%B2%D0%B0%D0%B8?node-id=0-1&t=AJ8UPUAzX2RGzCCM-1" target="_blank">
+														<span class="projects-tab__text">Нажмите здесь, чтобы перейти</span>
+														<h3 class="projects-tab__title">МИНИСВАИ</h3>
+														<img class="projects-tab__icon" src="img/icons/arrow.svg" alt="arrow">
+													</a>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</section>
+
+							</div>
+
+
+						</div>
+					</div>
+				</section> <!-- section/projects -->
+
+			</main>
+
+			<!-- Footer -->
+			<footer class="footer" id="footer">
+				<div class="container">
+					<div class="footer__body">
+						<div class="footer__row row">
+							<div class="footer__col col-12 col-sm-6 order-1 order-sm-2">
+								<div class="footer__socials">
+									<a id="iconVk" class='icon' href="https://vk.com/dee_c0" target="_blank"><svg class='icon__item'><use xlink:href='#vk'></use></svg></a>
+									<a id="iconTelegram" class='icon' href="https://t.me/Deeco03" target="_blank"><svg class='icon__item'><use xlink:href='#telegram'></use></svg></a>
+									<a id="iconWhatsapp" class='icon' href="https://wa.me/79040717774" target="_blank"><svg class='icon__item'><use xlink:href='#whatsapp'></use></svg></a>
+								</div>
+								<div class="footer__phone-wrap">
+									<a class="footer__phone" href="tel:+79040717774">
+										<span class="d-flex align-items-center">
+											<span class='icon'><svg class='icon__item'><use xlink:href='#call'></use></svg></span>
+											8 (904) 071 77-74
+										</span>
+									</a>
+								</div>
+							</div>
+							<div class="footer__col col-12 col-sm-6 order-2 order-sm-1">
+								<div class="footer__logo deecode-logo-wrap">
+									<a class="deecode-logo" href="#">Deecode</a>
+								</div>
+								<div class="footer__copyright">© 2025 "Deecode" | Все права защищены</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer> <!-- footer -->
+
+		</div> <!-- ./wrapper -->
+
+		<script src="js/jquery-3.6.0.min.js"></script>
+		<script src="js/aos.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/app.min.js"></script>
+
+	</body>
+</html>
